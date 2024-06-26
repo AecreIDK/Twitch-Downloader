@@ -19,9 +19,16 @@ class App(tk.Frame):
         self.confirm_button = tk.Button(self, text="Confirm", command=self.download)
         self.confirm_button.grid(row=1, column=0)
 
+        #self.link = tk.Label(self, text="Supported Sites", fg="Blue", cursor="Hand2")
+        #self.link.grid(row=2,column=2)
+        #self.link.bind("<Button-1>", lambda e: self.URL_Open("Google.com"))
+
     def download(self):
         url = self.contents.get()
         subprocess.run(f'yt-dlp {url}', shell=True)
+
+    #def URL_Open(self, url):
+    #    webbrowser.open_new(url)
 
 root = tk.Tk()
 myapp = App(root)
