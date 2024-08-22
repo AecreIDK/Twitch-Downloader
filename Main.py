@@ -12,7 +12,7 @@ class App(tk.Frame):
         # Create the application variable.
         self.contents = tk.StringVar()
         # Set it to some value.
-        self.contents.set("https://youtu.be/ZxhyCXHXJzI?si=bImTJ1ytWiFRqtrB")
+        self.contents.set("enter")
         # Tell the entry widget to watch this variable.
         self.entrythingy["textvariable"] = self.contents
 
